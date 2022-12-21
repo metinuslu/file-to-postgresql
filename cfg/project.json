@@ -1,0 +1,9 @@
+{
+    "database": {
+       "host": "",
+       "name": "",
+       "username": "",
+       "userpass": "",
+       "schema":""
+   }
+ }
