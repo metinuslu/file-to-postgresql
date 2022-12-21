@@ -8,12 +8,11 @@ ___
     - MockPersonData.csv
     - MockPersonData.xlsx
 - **`envs/`**: This directory contains the files to be transferred to the database.
-- .dockerignore
 - .gitignore
-- Dockerfile
 - main.py
 - ReadMe.md
 - ReadMe.pdf
+- requirements.txt
 
 ## Install
 ```
@@ -21,58 +20,33 @@ pip install requirements.txt
 ```
 
 ## Run
-**`Help:`** python main.py --help
-
-### 1- Run on Local System
+**`Help:`** 
 ```
-python main.py --table NameTable --file Name.csv
+python main.py --help OR python main.py -h
+```
+**`Parameters:`** 
+```
+--host			: Database Host 
+-d & --database	: Database Name
+-t & --table	: Table Name
+-s & --schema	: Schema
+-u & --userName	: Username
+-p & --userPass	: Userpass
+-f & --file		: File
+-b & --sep		: Seperator
+```
+
+### 1- Run
+
+```
+python main.py -t MockPersonData -f MockPersonData.csv
 or
-python main.py -t NameTable -f Name.csv
-```
-
-### 2- Run on with Docker System
-- **Step 1:** Docker Image Build
-```
-docker build -t file_to_postgresql .
-```
-
-- **Step 1 Control:**
-```
-docker image ls
-or 
-docker images
-```
-
-- **Step 2:** Create and Run Container from Docker Image
-```
-docker run -d -p 8000:8000 file_to_postgresql
-or
-docker run --name file_to_postgresql_c -d -p 8000:8000 file_to_postgresql
-```
-
-- **Step 2.1 Control:** 
-```
-docker ps
-or 
-docker ps -a 
-```
-
-- **Step 2.2 Control:** 
-```
-docker logs <CONTAINER ID OR CONTAINER NAME>
-```
-
-- **Step 2.3 Control:** 
-```
-docker container ls -a
-docker rm <CONTAINER ID OR CONTAINER NAME>
-docker rmi face_detection_api
+python main.py --table MockPersonData --file MockPersonData.csv
 ```
 
 ## ToDo
-- [ ] Adult Detection
-- [ ] Logging
+- [] Read Binary file formats and export to PostgreSQL
+- [] Logging
 
 ## Contact
 - Metin Uslu | uslumetin@gmail.com
-- 
