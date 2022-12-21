@@ -45,8 +45,8 @@ python main.py --table MockPersonData --file MockPersonData.csv
 ```
 
 ## ToDo
-- [] Read Binary file formats and export to PostgreSQL
-- [] Logging
+- [ ] Read Binary file formats and export to PostgreSQL
+- [ ] Logging
 
 ## Contact
 - Metin Uslu | uslumetin@gmail.com
